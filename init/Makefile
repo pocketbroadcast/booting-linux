@@ -39,8 +39,8 @@ run-with-initramfs: vmlinuz initrd.img rootfs.img
 #	qemu-system-x86_64 -m 2G -kernel vmlinuz -initrd initrd.img -hda rootfs.img -append "root=/dev/sda console=ttyS0" -nographic
 ##	Reboot on kernel panic
 #	qemu-system-x86_64 -m 2G -kernel vmlinuz -initrd initrd.img -hda rootfs.img -append "root=/dev/sda console=ttyS0 panic=-1" -nographic
-##	Stop qemu on kernel panic
-#	qemu-system-x86_64 -m 2G -kernel vmlinuz -initrd initrd.img -hda rootfs.img -append "root=/dev/sda console=ttyS0 panic=-1" -nographic --no-reboot
+#	Stop qemu on kernel panic
+	qemu-system-x86_64 -m 2G -kernel vmlinuz -initrd initrd.img -hda rootfs.img -append "root=/dev/sda console=ttyS0 panic=-1" -nographic --no-reboot
 
 .PHONY: run
 run: vmlinuz rootfs.img
