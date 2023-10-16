@@ -27,7 +27,7 @@ rootfs.img: init
 	mkdir mount/rootfs/proc
 	mkdir mount/rootfs/sys
 	mkdir mount/rootfs/dev
-#	umount mount/rootfs
+	umount mount/rootfs
 	mv tmp-rootfs.img rootfs.img
 
 .PHONY: prepare
@@ -52,3 +52,4 @@ clean:
 	rm -f initrd.img
 	rm -f rootfs.img
 	rm -f init
+	rm -rf mount/
