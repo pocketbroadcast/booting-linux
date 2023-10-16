@@ -13,6 +13,7 @@ int main(int argc, char**argv) {
 
 #ifndef PLEASE_PANIC
 		printf("...and again!\n");
+        printf("Press Ctrl-A X to exit QEMU!\n");
 		sleep(3);
 #endif
 	}
